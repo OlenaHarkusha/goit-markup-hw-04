@@ -8,6 +8,7 @@
   --grey-bg-color: #f5f4fa;
   --active-accent-color: #188ce8;
   --main-black-color: #000000;
+  --icon-color: #afb1b8;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -115,15 +116,25 @@ a {
 
   margin-left: auto;
 }
+
 .contact .item:not(:last-child) {
   margin-right: 50px;
 }
 .contact-link {
+  display: flex;
+  align-items: center;
+
   padding: 32px 0;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+}
+.contact-icon {
+  margin-right: 10px;
+
+  fill: currentColor;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -132,7 +143,12 @@ a {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background: var(--dark-bg-color);
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .hero-body {
   text-align: center;
@@ -167,14 +183,22 @@ a {
 .hero-btn:focus {
   background-color: var(--active-accent-color);
 }
-.features {
-}
 .features-list {
   display: flex;
   gap: 30px;
 }
 .features-list .item {
   width: 270px;
+}
+.feature-thumb {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: var(--grey-bg-color);
+  border-radius: 4px;
 }
 .features-title {
   margin-bottom: 10px;
@@ -236,11 +260,108 @@ a {
   font-weight: 500;
   color: var(--header-color);
 }
+.our-team-cosials {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icon-color);
+}
+.soc-link:hover,
+.soc-link:focus {
+  background-color: var(--active-accent-color);
+  color: var(--white-accent-color);
+}
+.link-icon {
+  fill: currentColor;
+}
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+  margin-bottom: 50px;
+}
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.customer-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  color: var(--icon-color);
+}
+.customer-link:hover,
+.customer-link:focus {
+  color: var(--active-accent-color);
+  border: 1px solid var(--active-accent-color);
+}
+.customer-icon {
+  fill: currentColor;
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: var(--dark-bg-color);
+}
+.footer-wrap {
+  display: flex;
+  gap: 70px;
+}
+.social-links-wrap {
+  padding-top: 12px;
+}
+.social-links-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-accent-color);
+}
+.social-links-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  color: var(--white-accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-link-icon {
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--active-accent-color);
 }
 .footer-logo {
   display: inline-block;
@@ -294,8 +415,6 @@ a {
   color: var(--header-color);
   background-color: var(--grey-bg-color);
   border: none;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -303,6 +422,8 @@ a {
 .portfolio-btn:focus {
   background-color: var(--active-accent-color);
   color: var(--white-accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-items {
@@ -313,6 +434,11 @@ a {
 .portfolio-item {
   display: inline-block;
   flex-basis: calc((100%-60px) / 3);
+}
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .wrap {
   padding: 20px 24px;
