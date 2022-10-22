@@ -148,7 +148,10 @@ a {
     url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  min-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
 }
 .hero-body {
   text-align: center;
@@ -323,18 +326,16 @@ a {
 }
 .footer-wrap {
   display: flex;
+  align-items: baseline;
   gap: 70px;
 }
 .social-links-wrap {
-  padding-top: 12px;
 }
 .social-links-title {
   margin-bottom: 20px;
 
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-accent-color);
 }
